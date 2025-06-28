@@ -139,11 +139,15 @@ a {
 
 .banner {
   background-color: #2e2f42;
-  background-image: linear-gradient(rgba(46, 47, 66, 0.7)),
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
     url(/images/people-office.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 1440рх;
+  background-size: cover;
+  max-width: 1440рх;
   padding: 188px 0;
   height: 600px;
 }
@@ -177,6 +181,8 @@ a {
   height: 56px;
   display: block;
   border: none;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .banner-button:focus,
@@ -212,6 +218,9 @@ a {
 }
 
 .section-item-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   background-color: #f4f4fd;
   border: 1px solid #8e8f99;
@@ -274,7 +283,8 @@ a {
   background-color: #ffffff;
   width: calc((100% - 3 * 24px) / 4);
   border-radius: 0 0 4px 4px;
-  box-shadow: 0px 2px 0px 0px rgba(91, 89, 89, 0.3);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .team-item-img {
@@ -286,8 +296,6 @@ a {
 
 .cards {
   padding: 32px 0px;
-  padding-left: 8px;
-  padding-right: 8px;
 }
 
 .team-item-name {
@@ -319,15 +327,13 @@ a {
 }
 
 .team-cards-social-list-link {
-  display: inline-flex;
+  display: flex;
   width: 40px;
   height: 40px;
   background-color: #4d5ae5;
   border-radius: 50%;
   align-items: center;
   justify-content: center;
-
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-cards-social-list-link:hover,
@@ -339,12 +345,14 @@ a {
   width: calc((100% - 3 * 24px) / 4);
   width: 40px;
   height: 40px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-cards-social-list-logo {
   width: 16px;
   height: 16px;
-  /* fill: transparent; */
+  fill: #f4f4fd;
   display: block;
 }
 
@@ -378,7 +386,7 @@ a {
   overflow: hidden;
 }
 
-.overlay {
+/* .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -390,7 +398,23 @@ a {
   padding-top: 45px;
   padding-left: 32px;
   transform: translateY(100%);
-  transition: transform 250ms ease-in-out;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+} */
+
+.portfolio-text {
+  position: absolute;
+  top: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  padding: 40px 32px;
+  background-color: #4d5ae5;
+  height: 100%;
+  width: 100%;
+  transform: translateY(100%);
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .image-wrapper:hover .overlay {
@@ -400,11 +424,12 @@ a {
 .portfolio-item {
   width: calc((100% - 2 * 24px) / 3);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  /* box-shadow: 0px 2px 0px 0px rgba(91, 89, 89, 0.3); */
 }
 
 .portfolio-item:hover {
-  box-shadow: 0px 2px 0px 0px rgba(91, 89, 89, 0.3);
+  transform: translateY(0%);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-list-item {
