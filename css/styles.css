@@ -143,12 +143,12 @@ a {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(/images/people-office.jpg);
+    url(../images/people-office.jpg);
   max-width: 1440px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
+  margin: 0 auto;
   padding: 188px 0;
   height: 600px;
 }
@@ -454,7 +454,6 @@ a {
 .wrap {
   display: flex;
   align-items: baseline;
-  gap: 120px;
 }
 
 .page-footer-item {
@@ -482,7 +481,6 @@ a {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #fff;
-  padding-bottom: 16px;
   margin-bottom: 16px;
 }
 
